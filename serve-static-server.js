@@ -27,7 +27,7 @@ var _maxAge = 1000 * 60;
 Meteor.ServeStatic = {
   config: function(options) {
     _pattern = options.patternRegex;
-    _maxAge = _maxAge | options.maxAge;
+    _maxAge = options.maxAge || _maxAge;
     start();
   }
 }
